@@ -1,4 +1,4 @@
-import {LoginFormType} from "../types/AuthorizationFormType";
+import {LoginFormType} from "../../types/AuthorizationFormType";
 
 export const getFromLocalStorage = (key: string) => {
     if (typeof window !== 'undefined') {

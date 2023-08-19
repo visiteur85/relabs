@@ -5,9 +5,9 @@ import {LoginFormType} from "../../../../types/AuthorizationFormType";
 import {Button, LinearProgress, Stack} from "@mui/material";
 import {LoginInput} from "./loginInput/LoginInput";
 import {PasswordInput} from "./passwordInput/PasswordInput";
-import {getLoginFromStorage, saveLoginToStorage} from "../../../../utils/loginForLocalStorage";
+import {getLoginFromStorage, saveLoginToStorage} from "../../../../shared/utils/loginForLocalStorage";
 import {Navigate, useNavigate} from "react-router-dom";
-import {PATH} from "../../../../utils/path";
+import {PATH} from "../../../../shared/constants/path";
 
 export const AuthorizationForm = () => {
     const [isFetch, setIsFetch] = useState(false);
