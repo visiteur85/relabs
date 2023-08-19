@@ -5,6 +5,7 @@ import {LoginFormType} from "../../../../types/AuthorizationFormType";
 import {Button, LinearProgress, Stack} from "@mui/material";
 import {LoginInput} from "./loginInput/LoginInput";
 import {PasswordInput} from "./passwordInput/PasswordInput";
+import {saveLoginToStorage} from "../../../../utils/loginForLocalStorage";
 
 export const AuthorizationForm = () => {
     const [isFetch, setIsFetch] = useState(false)
@@ -15,6 +16,7 @@ export const AuthorizationForm = () => {
     } = useForm<LoginFormType>({mode: 'onSubmit'});
     const onSubmit: SubmitHandler<LoginFormType> = (data) => {
       setIsFetch(true);
+      saveLoginToStorage(data)
       setTimeout(()=>{setIsFetch(false)}, 2000)
     };
 
