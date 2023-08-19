@@ -5,7 +5,7 @@ import {MainPage} from "./pages/mainPage/MainPage";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {PATH} from "./shared/constants/path";
 import {PageNotFound} from "./pages/404/PageNotFound";
-import {Shop} from "./pages/Shop/Shop";
+import {Shop} from "./pages/shop/Shop";
 
 function App() {
     return (

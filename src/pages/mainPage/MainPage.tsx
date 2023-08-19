@@ -7,7 +7,7 @@ import {UsersList} from "./usersList/UsersList";
 import {usersApi} from "../../api/usersApi";
 import {LinearProgress} from "@mui/material";
 import {FetchUsersType} from "../../types/fetchType";
-import {EventList} from "./EventList/EventList";
+import {EventList} from "./eventList/EventList";
 
 
 export const MainPage = () => {
@@ -29,19 +29,15 @@ export const MainPage = () => {
         setUsers(newUsersData)
     }
 
-
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setIsFetch(true)
-                const res = await usersApi.getUsers(0);
+                const res = await usersApi.getUsers();
                 setUsers(res.data)
                 setIsFetch(false)
             } catch (error) {
                 console.error('Error fetching users:', error);
-                throw new Error(
-
-                )
             }
         };
         fetchData();

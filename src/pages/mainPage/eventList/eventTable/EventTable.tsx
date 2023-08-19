@@ -9,7 +9,7 @@ export const EventTable = () => {
 
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: 540 }} component={Paper}>
+        <TableContainer sx={{ maxHeight: 540, padding: '8px 0' }} component={Paper}>
             <Table sx={{minWidth: 300, '& td, & th': {width: '20px', padding: '4px 4px'}}} aria-label="simple table">
                 <TableHead>
                     <TableRow>

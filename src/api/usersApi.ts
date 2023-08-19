@@ -3,7 +3,8 @@ import {FetchUsersType} from "../types/fetchType";
 
 
 export const usersApi = {
-    getUsers: (offset:number) => {
-        return instance.get<FetchUsersType>(`/users/list?offset=${offset}`)
+    getUsers: (offset?: number) => {
+        const url = offset !== undefined ? `/list?offset=${offset}` : '/list';
+        return instance.get<FetchUsersType>(url);
     }
 }
