@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/relabs/static/css/main.928cbf79.css",
+    "main.js": "/relabs/static/js/main.54c26624.js",
+    "static/js/787.0f4facce.chunk.js": "/relabs/static/js/787.0f4facce.chunk.js",
+    "index.html": "/relabs/index.html",
+    "main.928cbf79.css.map": "/relabs/static/css/main.928cbf79.css.map",
+    "main.54c26624.js.map": "/relabs/static/js/main.54c26624.js.map",
+    "787.0f4facce.chunk.js.map": "/relabs/static/js/787.0f4facce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.928cbf79.css",
+    "static/js/main.54c26624.js"
+  ]
+}
