@@ -4,6 +4,7 @@ import {UsersTable} from "./usersTable/UsersTable";
 import {UsersPagination} from "./usersPagination/UsersPagination";
 import {PaginationData} from "../../../shared/constants/pagination";
 import style from './userList.module.css'
+import {Heading} from "../../../components/heading/Heading";
 
 
 type UsersListPropsType = {
@@ -24,6 +25,7 @@ export const UsersList = ({users, callback, total, setNewUsers}: UsersListPropsT
 
     return (
         <>
+            <Heading text={'Список пользователей'}/>
             <div className={style.table}>
                 <UsersTable users={users} callback={onRemoveUser}/>
             </div>

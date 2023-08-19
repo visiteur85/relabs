@@ -14,8 +14,8 @@ function App() {
                 <Route path={PATH.MAIN_PAGE} element={<MainPage/>}/>
                 <Route path={PATH.LOGIN} element={<Authorization/>}/>
                 <Route path={PATH.SHOP} element={<Shop/>}/>
-                {/*<Route path={PATH.ERROR_PAGE} element={<PageNotFound/>}/>*/}
-                {/*<Route path='*' element={<Navigate to={"404"}/>}/>*/}
+                <Route path={PATH.ERROR_PAGE} element={<PageNotFound/>}/>
+                <Route path='*' element={<Navigate to={"404"}/>}/>
 
 
             </Routes>
