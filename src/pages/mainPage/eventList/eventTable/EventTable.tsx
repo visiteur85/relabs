@@ -4,8 +4,11 @@ import {formatDateTime} from "../../../../shared/utils/formatDateTime";
 import {useStartWebSocket} from "../../../../shared/utils/useWebSocket";
 
 export const EventTable = () => {
+    const {events, errorMessage} = useStartWebSocket();
 
-    const events = useStartWebSocket().events
+    if (errorMessage) {
+        return <div>Что-то не так</div>
+    }
 
     return (
         <Paper sx={{width: '100%', overflow: 'hidden'}}>

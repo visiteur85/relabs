@@ -8,6 +8,7 @@ import {usersApi} from "../../api/usersApi";
 import {LinearProgress} from "@mui/material";
 import {FetchUsersType} from "../../types/fetchType";
 import {EventList} from "./eventList/EventList";
+import {toast} from "react-toastify";
 
 
 export const MainPage = () => {
@@ -37,7 +38,8 @@ export const MainPage = () => {
                 setUsers(res.data)
                 setIsFetch(false)
             } catch (error) {
-                console.error('Error fetching users:', error);
+                toast.error("Ошибка сервера")
+                setIsFetch(false)
             }
         };
         fetchData();

@@ -3,9 +3,9 @@ import style from './heading.module.css'
 
 
 type HeadingPropsType = {
-    text:string
+    text: string
 }
-export const Heading = ({text}:HeadingPropsType) => {
+export const Heading = ({text}: HeadingPropsType) => {
     return (
         <h2 className={style.heading}>{text}</h2>
     );
