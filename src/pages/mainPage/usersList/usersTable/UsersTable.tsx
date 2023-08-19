@@ -12,14 +12,14 @@ type UsersTablePropsType = {
 export const UsersTable = ({users, callback}: UsersTablePropsType) => {
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 200, '& td, & th': { padding: '4px 4px' } }} aria-label="simple table">
+            <Table sx={{ minWidth: 300, '& td, & th': { width:'20px', padding: '4px 4px' } }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell>ID</TableCell>
-                        <TableCell align="right">Имя</TableCell>
-                        <TableCell align="right">Роль</TableCell>
-                        <TableCell align="right">Дата создания</TableCell>
-                        <TableCell align="right">Действия</TableCell>
+                        <TableCell align="center">Имя</TableCell>
+                        <TableCell align="center">Роль</TableCell>
+                        <TableCell align="center">Дата создания</TableCell>
+                        <TableCell align="center">Действия</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -31,10 +31,10 @@ export const UsersTable = ({users, callback}: UsersTablePropsType) => {
                             <TableCell component="th" scope="row">
                                 {user.id}
                             </TableCell>
-                            <TableCell align="right">{user.name}</TableCell>
-                            <TableCell align="right">{user.role}</TableCell>
-                            <TableCell align="right">{formatDateTime(user.ctime)}</TableCell>
-                            <TableCell align="right">
+                            <TableCell align="center">{user.name}</TableCell>
+                            <TableCell align="center">{user.role}</TableCell>
+                            <TableCell align="center">{formatDateTime(user.ctime)}</TableCell>
+                            <TableCell align="center">
                                 <Button size={'small'} onClick={() => {
                                     callback(user.id)
                                 }} variant={'contained'}>

@@ -3,10 +3,11 @@ import style from './mainPage.module.css'
 import {getLoginFromStorage} from "../../shared/utils/loginForLocalStorage";
 import {Navigate} from "react-router-dom";
 import {PATH} from "../../shared/constants/path";
-import {UsersList} from "./UsersList/UsersList";
+import {UsersList} from "./usersList/UsersList";
 import {usersApi} from "../../api/usersApi";
 import {LinearProgress} from "@mui/material";
 import {FetchUsersType} from "../../types/fetchType";
+import {EventList} from "./EventList/EventList";
 
 
 export const MainPage = () => {
@@ -51,14 +52,18 @@ export const MainPage = () => {
     }
 
     return (
-        <div className={style.main}>
+        <section>
             {isFetch && <LinearProgress color="secondary"/>}
             {!isFetch && (
-                <div>
-                    <UsersList total={users?.total} setNewUsers={getUsersPerPage} callback={removeUser} users={users}/>
+                <div className={style.main}>
+                    <div>
+                        <UsersList total={users?.total} setNewUsers={getUsersPerPage} callback={removeUser}
+                                   users={users}/>
+                    </div>
+                    <EventList/>
                 </div>
             )}
-        </div>
+        </section>
     );
 };
 

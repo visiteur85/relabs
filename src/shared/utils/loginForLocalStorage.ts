@@ -1,5 +1,5 @@
 import {getFromLocalStorage, removeFromStorage, setToLocalStorage} from "./local-storage";
-import {LoginFormType} from "../../types/AuthorizationFormType";
+import {LoginFormType} from "../../types/authorizationFormType";
 
 
 const KEY = 'login';

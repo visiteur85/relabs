@@ -1,5 +1,5 @@
 import {FieldErrors, FieldPath, RegisterOptions, UseFormRegisterReturn} from "react-hook-form";
-import {LoginFormType} from "../../../../../types/AuthorizationFormType";
+import {LoginFormType} from "../../../../../types/authorizationFormType";
 import React, {useState} from "react";
 import {IconButton, InputAdornment, TextField} from "@mui/material";
 import {Visibility, VisibilityOff} from "@mui/icons-material";

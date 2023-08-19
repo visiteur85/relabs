@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import style from './authorizationForm.module.css'
 import {SubmitHandler, useForm,} from "react-hook-form";
-import {LoginFormType} from "../../../../types/AuthorizationFormType";
+import {LoginFormType} from "../../../../types/authorizationFormType";
 import {Button, LinearProgress, Stack} from "@mui/material";
 import {LoginInput} from "./loginInput/LoginInput";
 import {PasswordInput} from "./passwordInput/PasswordInput";

@@ -10,11 +10,17 @@ type UsersPaginationPropsType = {
     setNewUsers: (newUsersData: FetchUsersType) => void
 }
 export const UsersPagination = ({total, setNewUsers}: UsersPaginationPropsType) => {
-
     const onChangePage = async (e: ChangeEvent<unknown>, page: number) => {
         const offset = (page - 1) * PaginationData.limit
-        const newUsersData = await usersApi.getUsers(offset)
-        setNewUsers(newUsersData.data)
+        try {
+            const newUsersData = await usersApi.getUsers(offset)
+            setNewUsers(newUsersData.data)
+
+        } catch (error) {
+            console.error('Error fetching users:', error);
+            throw new Error(
+            )
+        }
     }
 
     return (

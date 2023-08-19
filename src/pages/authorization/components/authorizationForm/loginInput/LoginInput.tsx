@@ -1,5 +1,5 @@
 import {FieldErrors, FieldPath, RegisterOptions, UseFormRegisterReturn} from "react-hook-form";
-import {LoginFormType} from "../../../../../types/AuthorizationFormType";
+import {LoginFormType} from "../../../../../types/authorizationFormType";
 import {TextField} from "@mui/material";
 import React from "react";
 
