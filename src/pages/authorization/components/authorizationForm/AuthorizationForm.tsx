@@ -9,7 +9,11 @@ import {getLoginFromStorage, saveLoginToStorage} from "../../../../shared/utils/
 import {Navigate, useNavigate} from "react-router-dom";
 import {PATH} from "../../../../shared/constants/path";
 
-export const AuthorizationForm = () => {
+
+type AuthorizationFormPropsType = {
+    setAuth:  React.Dispatch<React.SetStateAction<boolean>>
+}
+export const AuthorizationForm = ({setAuth}:AuthorizationFormPropsType) => {
     const [isFetch, setIsFetch] = useState(false);
     const login = getLoginFromStorage()
 
@@ -26,6 +30,7 @@ export const AuthorizationForm = () => {
         saveLoginToStorage(data)
         setTimeout(() => {
             setIsFetch(false)
+            setAuth(true)
             navigate(PATH.MAIN_PAGE)
 
         }, 2000)
