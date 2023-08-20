@@ -5,8 +5,8 @@ import {LoginFormType} from "../../../../types/authorizationFormType";
 import {Button, LinearProgress, Stack} from "@mui/material";
 import {LoginInput} from "./loginInput/LoginInput";
 import {PasswordInput} from "./passwordInput/PasswordInput";
-import {getLoginFromStorage, saveLoginToStorage} from "../../../../shared/utils/loginForLocalStorage";
-import {Navigate, useNavigate} from "react-router-dom";
+import {saveLoginToStorage} from "../../../../shared/utils/loginForLocalStorage";
+import {useNavigate} from "react-router-dom";
 import {PATH} from "../../../../shared/constants/path";
 
 
@@ -15,8 +15,6 @@ type AuthorizationFormPropsType = {
 }
 export const AuthorizationForm = ({setAuth}: AuthorizationFormPropsType) => {
     const [isFetch, setIsFetch] = useState(false);
-    const login = getLoginFromStorage()
-
     const navigate = useNavigate()
 
     const {
@@ -36,9 +34,6 @@ export const AuthorizationForm = ({setAuth}: AuthorizationFormPropsType) => {
         }, 2000)
     };
 
-    if (login) {
-        return <Navigate to={PATH.MAIN_PAGE}/>
-    }
 
     return (
         <div className={style.authorizationForm}>
