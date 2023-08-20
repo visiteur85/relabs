@@ -1,4 +1,4 @@
-import {instance} from "./instanse/instanse";
+import {instance} from "./instanсe/instanсe";
 import {FetchUsersType} from "../types/fetchType";
 
 

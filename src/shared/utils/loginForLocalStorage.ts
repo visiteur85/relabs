@@ -1,4 +1,4 @@
-import {getFromLocalStorage, removeFromStorage, setToLocalStorage} from "./local-storage";
+import {getFromLocalStorage, removeFromStorage, setToLocalStorage} from "./localStorage";
 import {LoginFormType} from "../../types/authorizationFormType";
 
 
