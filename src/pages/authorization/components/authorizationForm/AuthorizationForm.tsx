@@ -11,9 +11,9 @@ import {PATH} from "../../../../shared/constants/path";
 
 
 type AuthorizationFormPropsType = {
-    setAuth:  React.Dispatch<React.SetStateAction<boolean>>
+    setAuth: React.Dispatch<React.SetStateAction<boolean>>
 }
-export const AuthorizationForm = ({setAuth}:AuthorizationFormPropsType) => {
+export const AuthorizationForm = ({setAuth}: AuthorizationFormPropsType) => {
     const [isFetch, setIsFetch] = useState(false);
     const login = getLoginFromStorage()
 

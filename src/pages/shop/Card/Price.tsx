@@ -6,8 +6,8 @@ import {Typography} from "@mui/material";
 export const Price = () => {
     return (
         <div className={style.price}>
-            <Typography variant="h5" >86 956 ₽</Typography>
-            <Typography variant="h6" style={{ textDecoration: 'line-through' }}>99 999 ₽</Typography>
+            <Typography variant="h5">86 956 ₽</Typography>
+            <Typography variant="h6" style={{textDecoration: 'line-through'}}>99 999 ₽</Typography>
 
         </div>
     );

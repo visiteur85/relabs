@@ -1,0 +1,30 @@
+.shop {
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Оставляем медиа-запросы без изменений */
+@media (max-width: 1200px) {
+    .shop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .shop {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .shop {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+}

@@ -17,7 +17,7 @@ import style from './respinsiveAppBar.module.css'
 import {removeLoginFromStorage} from "../../shared/utils/loginForLocalStorage";
 
 type ResponsiveAppBarPropsType = {
-    setAuth:  React.Dispatch<React.SetStateAction<boolean>>
+    setAuth: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const pages = [
@@ -26,7 +26,7 @@ const pages = [
 ];
 const settings = ['Выйти'];
 
-function ResponsiveAppBar({setAuth}:ResponsiveAppBarPropsType) {
+function ResponsiveAppBar({setAuth}: ResponsiveAppBarPropsType) {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 

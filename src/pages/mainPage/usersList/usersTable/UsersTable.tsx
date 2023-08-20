@@ -12,7 +12,7 @@ type UsersTablePropsType = {
 export const UsersTable = ({users, callback}: UsersTablePropsType) => {
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 300, '& td, & th': { width:'20px', padding: '4px 4px' } }} aria-label="simple table">
+            <Table sx={{minWidth: 300, '& td, & th': {width: '20px', padding: '4px 4px'}}} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell>ID</TableCell>

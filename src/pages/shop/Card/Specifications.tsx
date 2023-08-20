@@ -17,7 +17,7 @@ export const Specifications = () => {
             {specifications.map((item, index) => (
                 <Typography color={'dimmed'} component={'span'} key={index}>
                     {item}
-                    {index !== lastItemIndex && <span className={style.separator }>/</span>}
+                    {index !== lastItemIndex && <span className={style.separator}>/</span>}
                 </Typography>
             ))}
         </div>

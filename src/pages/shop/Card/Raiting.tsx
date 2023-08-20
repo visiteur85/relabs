@@ -6,10 +6,10 @@ import {Typography} from "@mui/material";
 
 export const Raiting = () => {
     return (
-        <Box className={style.rating} >
-           <Rating defaultValue={2.5} />
-            <Typography sx={{ marginLeft: '8px' }}>
-              101
+        <Box className={style.rating}>
+            <Rating defaultValue={2.5}/>
+            <Typography sx={{marginLeft: '8px'}}>
+                101
             </Typography>
         </Box>
     );
