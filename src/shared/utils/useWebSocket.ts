@@ -9,7 +9,7 @@ export const useStartWebSocket = () => {
 
     useEffect(() => {
 
-        setTimeout(() => {
+
             const socket = new WebSocket(WEBSOCKET_URL);
 
             socket.onmessage = event => {
@@ -18,11 +18,11 @@ export const useStartWebSocket = () => {
             };
             socket.onerror = () => {
                 toast.error('Проблема с каналом связи')
-                serErrorMessage('Ошбика')
+                serErrorMessage('Ошибка')
             };
 
             return () => socket.close();
-        },)
+
 
 
     }, []);
