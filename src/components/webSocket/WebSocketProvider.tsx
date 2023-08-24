@@ -9,6 +9,7 @@ export type WebSocketContextProps = {
     socketOn: () => void;
     socketClose: () => void;
     socket: WebSocket | null;
+    errorMessage:string
 }
 export const webSocketContext = createContext<WebSocketContextProps | undefined>(undefined)
 export const useWebSocket = () => {
@@ -48,7 +49,8 @@ export const WebSocketProvider = ({children}: { children: React.ReactNode }) => 
         events,
         socketOn,
         socketClose,
-        socket
+        socket,
+        errorMessage
     }
 
     return (
