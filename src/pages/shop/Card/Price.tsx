@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './cart.module.css'
-import {Title} from "@mui/icons-material";
 import {Typography} from "@mui/material";
 
 export const Price = () => {
