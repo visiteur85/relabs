@@ -1,14 +1,12 @@
 import React from 'react';
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import {formatDateTime} from "../../../../shared/utils/formatDateTime";
-import {useStartWebSocket} from "../../../../shared/utils/useWebSocket";
+import {useWebSocket} from "../../../../components/webSocket/WebSocketProvider";
 
 export const EventTable = () => {
-    const {events, errorMessage} = useStartWebSocket();
 
-    if (errorMessage) {
-        return <div>Что-то не так</div>
-    }
+    const webSocketContext = useWebSocket();
+
 
     return (
         <Paper sx={{width: '100%', overflow: 'hidden'}}>
@@ -22,7 +20,7 @@ export const EventTable = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {events.map((event) => (
+                        {webSocketContext && webSocketContext.events.map((event: any) => (
                             <TableRow
                                 key={event.event}
                                 sx={{'&:last-child td, &:last-child th': {border: 0}}}

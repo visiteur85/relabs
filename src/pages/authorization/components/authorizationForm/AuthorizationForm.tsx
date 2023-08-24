@@ -8,6 +8,7 @@ import {PasswordInput} from "./passwordInput/PasswordInput";
 import {saveLoginToStorage} from "../../../../shared/utils/loginForLocalStorage";
 import {useNavigate} from "react-router-dom";
 import {PATH} from "../../../../shared/constants/path";
+import {useWebSocket} from "../../../../components/webSocket/WebSocketProvider";
 
 
 type AuthorizationFormPropsType = {
@@ -15,7 +16,8 @@ type AuthorizationFormPropsType = {
 }
 export const AuthorizationForm = ({setAuth}: AuthorizationFormPropsType) => {
     const [isFetch, setIsFetch] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
 
     const {
         register,
@@ -30,6 +32,7 @@ export const AuthorizationForm = ({setAuth}: AuthorizationFormPropsType) => {
             setIsFetch(false)
             setAuth(true)
             navigate(PATH.MAIN_PAGE)
+
 
         }, 2000)
     };

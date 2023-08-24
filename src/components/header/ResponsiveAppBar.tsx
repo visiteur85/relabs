@@ -15,6 +15,7 @@ import {PATH} from "../../shared/constants/path";
 import {NavLink, useNavigate} from "react-router-dom";
 import style from './respinsiveAppBar.module.css'
 import {removeLoginFromStorage} from "../../shared/utils/loginForLocalStorage";
+import {useWebSocket} from "../webSocket/WebSocketProvider";
 
 type ResponsiveAppBarPropsType = {
     setAuth: React.Dispatch<React.SetStateAction<boolean>>
@@ -29,6 +30,7 @@ const settings = ['Выйти'];
 function ResponsiveAppBar({setAuth}: ResponsiveAppBarPropsType) {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+    const webSocketContext = useWebSocket();
 
     const navigate = useNavigate()
 
@@ -51,6 +53,9 @@ function ResponsiveAppBar({setAuth}: ResponsiveAppBarPropsType) {
         removeLoginFromStorage();
         setAuth(false)
         navigate(PATH.LOGIN)
+        if (webSocketContext && webSocketContext.socket) {
+            webSocketContext.socketClose();
+        }
 
     }
 
