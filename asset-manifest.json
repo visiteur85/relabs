@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/relabs/static/css/main.9ad7886f.css",
-    "main.js": "/relabs/static/js/main.cdbad4a6.js",
+    "main.js": "/relabs/static/js/main.2cb65123.js",
     "static/js/787.0f4facce.chunk.js": "/relabs/static/js/787.0f4facce.chunk.js",
     "static/media/iphone.jpeg": "/relabs/static/media/iphone.b7c4fad2942489c12c57.jpeg",
     "index.html": "/relabs/index.html",
     "main.9ad7886f.css.map": "/relabs/static/css/main.9ad7886f.css.map",
-    "main.cdbad4a6.js.map": "/relabs/static/js/main.cdbad4a6.js.map",
+    "main.2cb65123.js.map": "/relabs/static/js/main.2cb65123.js.map",
     "787.0f4facce.chunk.js.map": "/relabs/static/js/787.0f4facce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ad7886f.css",
-    "static/js/main.cdbad4a6.js"
+    "static/js/main.2cb65123.js"
   ]
 }
