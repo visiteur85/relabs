@@ -33,7 +33,7 @@ export const UsersTable = ({users, callback}: UsersTablePropsType) => {
                             </TableCell>
                             <TableCell align="center">{user.name}</TableCell>
                             <TableCell align="center">{user.role}</TableCell>
-                            <TableCell align="center">{formatDateTime(user.ctime)}</TableCell>
+                            <TableCell align="center">{formatDateTime(+user.ctime)}</TableCell>
                             <TableCell align="center">
                                 <Button size={'small'} onClick={() => {
                                     callback(user.id)

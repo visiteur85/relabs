@@ -2,10 +2,13 @@ import React from 'react';
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import {formatDateTime} from "../../../../shared/utils/formatDateTime";
 import {useWebSocket} from "../../../../components/webSocket/WebSocketProvider";
+import {useWhyDidYouUpdate} from 'ahooks';
 
 export const EventTable = () => {
 
     const webSocketContext = useWebSocket();
+
+    useWhyDidYouUpdate('EventTable', {webSocketContext});
 
 
     return (
@@ -26,7 +29,7 @@ export const EventTable = () => {
                                 sx={{'&:last-child td, &:last-child th': {border: 0}}}
                             >
                                 <TableCell align="center">{event.event}</TableCell>
-                                <TableCell align="center">{formatDateTime(event.ctime)}</TableCell>
+                                <TableCell align="center">{formatDateTime(+event.ctime)}</TableCell>
 
                             </TableRow>
                         ))}

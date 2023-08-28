@@ -1,10 +1,14 @@
-export const formatDateTime = (dateTimeString: string) => {
-    const dateTime = new Date(dateTimeString);
-    const day = String(dateTime.getDate()).padStart(2, '0');
-    const month = String(dateTime.getMonth() + 1).padStart(2, '0');
-    const year = dateTime.getFullYear();
-    const hours = String(dateTime.getHours()).padStart(2, '0');
-    const minutes = String(dateTime.getMinutes()).padStart(2, '0');
+export const formatDateTime = (dateTimeString: number) => {
+    const milliseconds = dateTimeString * 1000;
+    const dateObject = new Date(milliseconds);
 
-    return `${day}.${month}.${year} ${hours}:${minutes}`;
+    return addLeadingZero(dateObject.getDate()) +
+        "." + addLeadingZero(dateObject.getMonth() + 1) +
+        "." + dateObject.getFullYear() +
+        " " + addLeadingZero(dateObject.getHours()) +
+        ":" + addLeadingZero(dateObject.getMinutes());
 };
+
+function addLeadingZero(number: number) {
+    return number < 10 ? "0" + number : number;
+}
